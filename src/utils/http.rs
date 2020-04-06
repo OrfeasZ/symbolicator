@@ -108,7 +108,7 @@ impl Handler<Connect> for SafeResolver {
                         }
                     };
 
-                    for network in &*RESERVED_IP_BLOCKS {
+                    /*for network in &*RESERVED_IP_BLOCKS {
                         if network.contains(addr) {
                             metric!(counter("http.blocked_ip") += 1);
                             log::debug!(
@@ -117,7 +117,7 @@ impl Handler<Connect> for SafeResolver {
                             );
                             return false;
                         }
-                    }
+                    }*/
 
                     true
                 });
